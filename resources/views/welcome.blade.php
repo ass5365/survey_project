@@ -173,15 +173,7 @@
                                 @enderror
                             </span>
                         </div>
-                        
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Phone number :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="mobile" name="mobile" placeholder="Enter Mobile Number" onblur="validate(4)" value="{{ old('mobile') }}" required> </div>
-                            <span class="text-danger">
-                                @error('mobile')
-                                {{$message}}
-                                @enderror
-                            </span>
-                        </div>
+                     
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Ward No :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="ward" name="ward" placeholder="Enter Ward Number" onblur="validate(6)" value="{{ old('ward') }}" required>
                                 <span class="text-danger">
@@ -197,6 +189,15 @@
                                     @enderror
                                 </span>
                             </div>
+                               
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Phone number :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="mobile" name="mobile" placeholder="Enter Mobile Number" onblur="validate(4)" value="{{ old('mobile') }}" required> </div>
+                            <span class="text-danger">
+                                @error('mobile')
+                                {{$message}}
+                                @enderror
+                            </span>
+                        </div>
 
                         </div>
 
