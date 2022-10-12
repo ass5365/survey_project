@@ -143,21 +143,37 @@
                     <form method="POST" action="{{ route('addSurvey') }}" class="form-card">
                         @csrf
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-4 flex-column d-flex"> <label class="form-control-label px-3">Name of Head of Family :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="family_head_name" name="family_head_name" value="{{ old('family_head_name') }}" placeholder="Enter Your Name" onblur="validate(1)" required> </div>
-                            <span class="text-danger">
-                                @error('family_head_name')
-                                {{$message}}
-                                @enderror
-                            </span>
-                        </div>
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Address :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="address" name="address" placeholder="Enter Address" onblur="validate(3)" value="{{ old('address') }}" required> </div>
+                            <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Family Head Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="family_head_name" name="family_head_name" placeholder="Enter Family Head Name" onblur="validate(6)" value="{{ old('family_head') }}" required>
+                                <span class="text-danger">
+                                    @error('family_head_name')
+                                    {{$message}}
+                                    @enderror
+                                </span>
+                            </div>
+                            <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Father Name :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="father_name" name="father_name" placeholder="Enter Father Name" onblur="validate(6)" value="{{ old('father_name') }}" required>
+                                <span class="text-danger">
+                                    @error('father_name')
+                                    {{$message}}
+                                    @enderror
+                                </span>
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Surname :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="surname" name="surname" placeholder="Enter SurName" onblur="validate(6)" value="{{ old('surname') }}" required>
+                                    <span class="text-danger">
+                                        @error('surname')
+                                        {{$message}}
+                                        @enderror
+                                    </span>
+                                </div>
+                        <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">address :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="address" name="address" placeholder="Enter address" onblur="validate(6)" value="{{ old('address') }}" required>
                             <span class="text-danger">
                                 @error('address')
                                 {{$message}}
                                 @enderror
                             </span>
                         </div>
+                        
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-sm-12 flex-column d-flex"> <label class="form-control-label px-3">Phone number :<span class="text-danger"> *</span></label> <input type="text" class="inp" id="mobile" name="mobile" placeholder="Enter Mobile Number" onblur="validate(4)" value="{{ old('mobile') }}" required> </div>
                             <span class="text-danger">

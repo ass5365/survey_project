@@ -15,6 +15,8 @@
                         <th>S.No.</th>
                         <th>Survey Id</th>
                         <th>Family Head Name</th>
+                        <th>Father Name</th>
+                        <th>SurName</th>
                         <th>Address</th>
                         <th>Mobile</th>
                         <th>Ward No.</th>
@@ -30,6 +32,8 @@
                         <td>{{ $key+1 }}</td>
                         <td>{{ $row->surveyId}}</td>
                         <td>{{ $row->family_head_name }}</td>
+                        <td>{{$row->father_name}}</td>
+                        <td>{{$row->surname}}</td>
                         <td>{{ $row->address}}</td>
                         <td>{{ $row->mobile }}</td>
                         <td>{{ $row->ward_no }}</td>
